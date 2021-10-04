@@ -1,67 +1,54 @@
 $(document).ready(function() {
-    var contador = '';
-    //$.get('contador.txt', function(data) {
-    //    contador = parseFloat(data);
-    //});
-    //contador = contador + 1;
-    //Clic inicio
-
-    $("#inicio").click(function() {
+    //Clic Administrador 
+    $("#Administrador").click(function() {
         $(".contenido").hide();
-        $("#divInicio").show();
-
-        /*$(".nav-link").removeClass("nav-link active").addClass("nav-link");
-        $("#inicio").removeClass("nav-link").addClass("nav-link active");*/
-
+        $("#divAdministrador").show();
     });
 
-    //Clic lecturas
-    $("#lecturas").click(function() {
+
+
+    //Clic Invenario
+    $("#invenario").click(function() {
         $(".contenido").hide();
-        $("#divLecturas").show();
-
-        /*$(".nav-link").removeClass("nav-link active").addClass("nav-link");
-        $("#lecturas").removeClass("nav-link").addClass("nav-link active");*/
-
+        $("#divInventario").show();
+    });
+    //Clic multimediaIngresar
+    $("#multimediaIngresar").click(function() {
+        $(".contenido").hide();
+        $("#divMultimediaIngresar").show();
+    });
+    //Clic multimediaActualizar
+    $("#multimediaActualizar").click(function() {
+        $(".contenido").hide();
+        $("#divMultimediaActualizar").show();
+    });
+    //Clic multimediaEliminar
+    $("#multimediaEliminar").click(function() {
+        $(".contenido").hide();
+        $("#divMultimediaEliminar").show();
+    });
+    //Clic multimediaConsultar
+    $("#multimediaConsultar").click(function() {
+        $(".contenido").hide();
+        $("#divMultimediaConsultar").show();
     });
 
-    //Clic multimediaGit
-    $("#multimediaGit").click(function() {
-        $(".contenido").hide();
-        $("#divMultimediaGit").show();
 
-        /*$(".nav-link").removeClass("nav-link active").addClass("nav-link");
-        $("#multimedia").removeClass("nav-link").addClass("nav-link active");*/
-
-    });
-
-    //Clic multimediaApoyo
-    $("#multimediaApoyo").click(function() {
-        $(".contenido").hide();
-        $("#divMultimediaApoyo").show();
-
-        /*$(".nav-link").removeClass("nav-link active").addClass("nav-link");
-        $("#multimedia").removeClass("nav-link").addClass("nav-link active");*/
-
-    });
 
     //Clic actividades
-    $("#actividades").click(function() {
+    $("#utilidades").click(function() {
         $(".contenido").hide();
-        $("#divActividades").show();
-
-        /*$(".nav-link").removeClass("nav-link active").addClass("nav-link");
-        $("#actividades").removeClass("nav-link").addClass("nav-link active");*/
-
+        $("#divUtilidades").show();
+    });
+    //Clic multimediaUtilidad
+    $("#multimediaUtilidad").click(function() {
+        $(".contenido").hide();
+        $("#divmultimediaUtilidad").show();
+    });
+    //Clic multimediaConversión
+    $("#multimediaConversión").click(function() {
+        $(".contenido").hide();
+        $("#divmultimediaConversión").show();
     });
 
-    //Clic autores
-    $("#autores").click(function() {
-        $(".contenido").hide();
-        $("#divAutores").show();
-
-        /*$(".nav-link").removeClass("nav-link active").addClass("nav-link");
-        $("#autores").removeClass("nav-link").addClass("nav-link active");*/
-
-    });
 });
