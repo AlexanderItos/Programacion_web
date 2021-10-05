@@ -51,4 +51,13 @@ $(document).ready(function() {
         $("#divConsultarConversion").show();
     });
 
+
+    //Clic Calcular utilidades
+    $("#consultarConversion").click(function() {
+        $("#tablaUtilidad").show();
+        $('#tdValor').html('changed value');
+        $('#tdIVA').html('changed value');
+        $('#tdGanancia').html('changed value');
+    });
+
 });
