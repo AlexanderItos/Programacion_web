@@ -120,6 +120,37 @@
                 <!---------------------  Consultar utilidad  -------------------------->
                 <div class="container-fluid contenido" id="divConsultarUtilidad">
                     <h1>Consultar Utilidad</h1>
+                    <div class="container-fluid contenido">
+                        <form>
+                            <div class="form-group">
+                                <label for="valor">Valor</label>
+                                <input type="currency" class="form-control" id="valor" aria-describedby="Valor del producto" placeholder="Ingrese el valor del producto">
+                            </div>
+                            <div class="form-group">
+                                <label for="utilidad">% Utilidad</label>
+                                <input type="text" class="form-control" id="utilidad" placeholder="Ingrese el porcentaje de utilidad">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2">%</span>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="iva">% IVA</label>
+                                <input type="text" class="form-control" id="iva" placeholder="Ingrese el porcentaje de IVA">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2">%</span>
+                                </div>
+
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </form>
+                        <div class="container-fluid contenido" id="tablaUtilidad">
+
+                        </div>
+                    </div>
+
+
                 </div>
                 <!---------------------  Consultar cambio peso información -------------------------->
                 <div class="container-fluid contenido" id="divConsultarConversion">
