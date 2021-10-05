@@ -53,11 +53,19 @@ $(document).ready(function() {
 
 
     //Clic Calcular utilidades
-    $("#consultarConversion").click(function() {
+    $("#btnCalcularUtilidades").click(function() {
+        var valor = parseFloat($("#valor").val() || 0);
+        var utilidad = parseFloat($("#utilidad").val() || 0);
+        var iva = parseFloat($("#iva").val() || 0);
+
+        var valorIva = valor * (iva / 100);
+        var valorUtilidad = valor * (utilidad / 100)
+        var valorTotal = valor + valorIva + valorUtilidad
+
         $("#tablaUtilidad").show();
-        $('#tdValor').html('changed value');
-        $('#tdIVA').html('changed value');
-        $('#tdGanancia').html('changed value');
+        $('#tdValor').html('$ ' + valorTotal.toFixed(2));
+        $('#tdIVA').html('$ ' + valorIva.toFixed(2));
+        $('#tdGanancia').html('$ ' + valorUtilidad.toFixed(2));
     });
 
 });
