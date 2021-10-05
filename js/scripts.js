@@ -8,47 +8,47 @@ $(document).ready(function() {
 
 
     //Clic Invenario
-    $("#invenario").click(function() {
+    //$("#invenario").click(function() {
+    //    $(".contenido").hide();
+    //    $("#divInventario").show();
+    //});
+    //Clic ingresarProducto
+    $("#ingresarProducto").click(function() {
         $(".contenido").hide();
-        $("#divInventario").show();
+        $("#divIngresarProducto").show();
     });
-    //Clic multimediaIngresar
-    $("#multimediaIngresar").click(function() {
+    //Clic actualizarProducto
+    $("#actualizarProducto").click(function() {
         $(".contenido").hide();
-        $("#divMultimediaIngresar").show();
+        $("#divActualizarProducto").show();
     });
-    //Clic multimediaActualizar
-    $("#multimediaActualizar").click(function() {
+    //Clic eliminarProducto
+    $("#eliminarProducto").click(function() {
         $(".contenido").hide();
-        $("#divMultimediaActualizar").show();
+        $("#divEliminarProducto").show();
     });
-    //Clic multimediaEliminar
-    $("#multimediaEliminar").click(function() {
+    //Clic consultarProducto
+    $("#consultarProducto").click(function() {
         $(".contenido").hide();
-        $("#divMultimediaEliminar").show();
-    });
-    //Clic multimediaConsultar
-    $("#multimediaConsultar").click(function() {
-        $(".contenido").hide();
-        $("#divMultimediaConsultar").show();
+        $("#divConsultarProducto").show();
     });
 
 
 
-    //Clic actividades
-    $("#utilidades").click(function() {
+    //Clic utilidades
+    //$("#utilidades").click(function() {
+    //    $(".contenido").hide();
+    //    $("#divUtilidades").show();
+    //});
+    //Clic consultarUtilidad
+    $("#consultarUtilidad").click(function() {
         $(".contenido").hide();
-        $("#divUtilidades").show();
+        $("#divConsultarUtilidad").show();
     });
-    //Clic multimediaUtilidad
-    $("#multimediaUtilidad").click(function() {
+    //Clic consultarConversión
+    $("#consultarConversion").click(function() {
         $(".contenido").hide();
-        $("#divmultimediaUtilidad").show();
-    });
-    //Clic multimediaConversión
-    $("#multimediaConversión").click(function() {
-        $(".contenido").hide();
-        $("#divmultimediaConversión").show();
+        $("#divConsultarConversion").show();
     });
 
 });
