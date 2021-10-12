@@ -133,6 +133,82 @@
                 <!---------------------  Consultar cambio peso información -------------------------->
                 <div class="container-fluid contenido" id="divConsultarConversion">
                     <h1>Consultar Conversión</h1>
+
+                    <div class="container-fluid">
+                            <div class="input-group  mb-3">
+                                <label class="col-sm-3" for="megabyte">Valor a convertir</label>
+                                <input type="number" class="form-control" id="cantidad" aria-describedby="Valor del Megabyte" placeholder="Ingrese el valor del megabyte">
+                            </div>
+                            <div class="input-group  mb-3">
+                                <label class="col-sm-3" for="megabyte">Tipo de dato Ingresado</label>
+                                <form name="formConversion" id="fom">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Byte" checked>
+                                        <label class="form-check-label" for="inlineRadio1">Byte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Kilobyte">
+                                        <label class="form-check-label" for="inlineRadio2">Kilobyte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Megabyte">
+                                        <label class="form-check-label" for="inlineRadio2">Megabyte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Gigabyte">
+                                        <label class="form-check-label" for="inlineRadio2">Gigabyte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Terabyte">
+                                        <label class="form-check-label" for="inlineRadio2">Terabyte</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="input-group  mb-3">
+                                <label class="col-sm-3" for="megabyte">Tipo de dato Convertir</label>
+                                <form name="formConvertir" id="fom">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Byte" checked>
+                                        <label class="form-check-label" for="inlineRadio1">Byte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Kilobyte">
+                                        <label class="form-check-label" for="inlineRadio2">Kilobyte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Megabyte">
+                                        <label class="form-check-label" for="inlineRadio2">Megabyte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Gigabyte">
+                                        <label class="form-check-label" for="inlineRadio2">Gigabyte</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Terabyte">
+                                        <label class="form-check-label" for="inlineRadio2">Terabyte</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="btnEquivalencia">Equivalencia</button>
+                            <div class="container-fluid contenido" id="tablaEquivalencias">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Concepto</th>
+                                            <th scope="col">Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" id="tdTexto"></th>
+                                            <td id="tdValorE"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+
+
                 </div>
 
             </div>

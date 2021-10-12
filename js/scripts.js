@@ -68,4 +68,53 @@ $(document).ready(function() {
         $('#tdGanancia').html('$ ' + valorUtilidad.toFixed(2));
     });
 
+    //Clic Calcular Equivalencias
+    $("#btnEquivalencia").click(function () {
+        var cantidad = parseFloat($("#cantidad").val() || 0);
+        var seleccionT = document.formConvertir.inlineRadioOptions.value;
+        var tipoT = document.formConversion.inlineRadioOptions.value;
+        var valorI = 1;
+        switch (tipoT){
+            case "Byte":
+                valorI = 1;
+                break;
+            case "Kilobyte":
+                valorI = 1000;
+                break;
+            case "Megabyte":
+                valorI = 1000000;
+                break;
+            case "Gigabyte":
+                valorI = 1000000000;
+                break;
+            case "Terabyte":
+                valorI = 1000000000000;
+                break;
+        }
+        
+        var valorC = 1;
+        switch (seleccionT) {
+            case "Byte":
+                valorC = 1;
+                break;
+            case "Kilobyte":
+                valorC = 1000;
+                break;
+            case "Megabyte":
+                valorC = 1000000;
+                break;
+            case "Gigabyte":
+                valorC = 1000000000;
+                break;
+            case "Terabyte":
+                valorC = 1000000000000;
+                break;
+        }
+
+        var valor = cantidad * valorI / valorC;
+
+        $("#tablaEquivalencias").show();
+        $('#tdTexto').html(seleccionT);
+        $('#tdValorE').html(valor.toLocaleString());
+    });
 });
