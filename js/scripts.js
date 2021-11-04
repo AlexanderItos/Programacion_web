@@ -1,11 +1,29 @@
 $(document).ready(function() {
     //Clic Administrador 
-    $("#Administrador").click(function() {
+    //$("#Administrador").click(function() {
+    //    $(".contenido").hide();
+    //    $("#divAdministrador").show();
+    //});
+     //Clic crear Base de datos
+    $("#crearBD").click(function () {
         $(".contenido").hide();
-        $("#divAdministrador").show();
+        $("#divCrearBD").show();
     });
-
-
+     //Clic crear Tabla
+    $("#crearTabla").click(function () {
+        $(".contenido").hide();
+        $("#divCrearTabla").show();
+    });
+     //Clic Generar PDF
+    $("#generarPDF").click(function () {
+        $(".contenido").hide();
+        $("#divGenerarPDF").show();
+    });
+    //Clic generarBackup
+    $("#generarBackup").click(function () {
+        $(".contenido").hide();
+        $("#divGenerarBackup").show();
+    });
 
     //Clic Invenario
     //$("#invenario").click(function() {

@@ -27,15 +27,22 @@
             <h1>PROGRAMACIÓN DE SITIOS WEB</h1>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" id="Administrador">Administrador</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="administrador">Administrador</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="crearBD">Crear Base de Datos</a>
+                        <a class="dropdown-item" id="crearTabla">Crear Tabla</a>
+                        <a class="dropdown-item" id="generarPDF">Generar Reporte PDF</a>
+                        <a class="dropdown-item" id="generarBackup">Generar Backup</a>
+
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="invenario">Inventario</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" id="ingresarProducto" href="formularioIngresarProductos.html">Ingresar producto</a>
-                        <a class="dropdown-item" id="actualizarProducto" href="formularioActualizarProductos.html">Actualizar producto</a>
-                        <a class="dropdown-item" id="eliminarProducto" href="formularioEliminarProductos.html">Eliminar producto</a>
-                        <a class="dropdown-item" id="consultarProducto" href="formularioConsultarProductos.html">Consultar producto</a>
+                        <a class="dropdown-item" id="ingresarProducto">Ingresar producto</a>
+                        <a class="dropdown-item" id="actualizarProducto">Actualizar producto</a>
+                        <a class="dropdown-item" id="eliminarProducto">Eliminar producto</a>
+                        <a class="dropdown-item" id="consultarProducto">Consultar producto</a>
 
                     </div>
                 </li>
@@ -53,31 +60,158 @@
         <div class="row">
             <div class="col-sm-12">
                 <!---------------------  Administración  -------------------------->
-                <div class="container-fluid contenido" id="divAdministrador">
-                    <h1>ADMINISTADOR</h1>
+                <!---------------------  Crear Base de Datos  ------------------------------>
+                <div class="container-fluid contenido" id="divCrearBD">
+                    <h1>Crear Base de Datos</h1>
                 </div>
-                <!---------------------  Inventario  -------------------------->
+                <!---------------------  Crear Tabla  ------------------------------>
+                <div class="container-fluid contenido" id="divCrearTabla">
+                    <h1>Crear Tabla</h1>
+                </div>
+                <!---------------------  Generar PDF  ------------------------------>
+                <div class="container-fluid contenido" id="divGenerarPDF">
+                    <h1>Generar reporte PDF</h1>
+                </div>
+                <!---------------------  Generar Backup  ------------------------------>
+                <div class="container-fluid contenido" id="divGenerarBackup">
+                    <h1>Generar Backup</h1>
+                </div>
 
+                <!---------------------  Inventario  -------------------------->
                 <!---------------------  Ingresar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divIngresarProducto">
                     <h1>Ingresar Producto</h1>
+                    <form action="#" method="POST">
+                        <div class="row mb-3">
+                            <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nombreProducto" class="col-sm-2 col-form-label">Nombre de producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombreProducto">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="marcaProducto" class="col-sm-2 col-form-label">Marca del producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese la marca del producto" id="marcaPproducto">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="precioCompra" class="col-sm-2 col-form-label">Precio de compra:</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" placeholder="Ingrese el precio de compra" id="precioCompra">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="cantidadComprada" class="col-sm-2 col-form-label">Cantidad comprada:</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" placeholder="Ingrese la cantidad comprada" id="cantidadComprada">
+                            </div>
+                        </div>
+
+                        <br />
+                        <button type="submit" class="btn btn-primary">Registrar producto</button>
+                        <br />
+                        <br />
+
+                    </form>
                 </div>
                 <!---------------------  Actualizar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divActualizarProducto">
                     <h1>Actualizar Producto</h1>
+                    <form action="#" method="POST">
+                        <div class="row mb-3">
+                            <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nombreProducto" class="col-sm-2 col-form-label">Nombre de producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombreProducto">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="marcaProducto" class="col-sm-2 col-form-label">Marca del producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese la marca del producto" id="marcaPproducto">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="precioCompra" class="col-sm-2 col-form-label">Precio de compra:</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" placeholder="Ingrese el precio de compra" id="precioCompra">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="cantidadComprada" class="col-sm-2 col-form-label">Cantidad comprada:</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" placeholder="Ingrese la cantidad comprada" id="cantidadComprada">
+                            </div>
+                        </div>
+
+                        <br />
+                        <button type="submit" class="btn btn-primary">Modificar producto</button>
+                        <br />
+                        <br />
+
+
+                    </form>
                 </div>
                 <!---------------------  Eliminar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divEliminarProducto">
                     <h1>Eliminar Producto</h1>
+                    <form action="#" method="POST">
+                        <div class="row mb-3">
+                            <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                            </div>
+
+                            <div class="col">
+                                <button type="submit" class="btn btn-danger">Borrar producto</button>
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </form>
                 </div>
                 <!---------------------  Consultar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divConsultarProducto">
                     <h1>Consultar Producto</h1>
+                    <form action="#" method="POST">
+                        <div class="row mb-3">
+                            <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-warning">Consultar producto</button>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <br />
+
+                    </form>
+
                 </div>
 
 
                 <!---------------------  Utilidades -------------------------->
-
                 <!---------------------  Consultar utilidad  -------------------------->
                 <div class="container-fluid contenido" id="divConsultarUtilidad">
                     <h1>Consultar Utilidad</h1>
@@ -129,86 +263,88 @@
                         </div>
                     </div>
 
-
+                    <br />
+                    <br />
                 </div>
                 <!---------------------  Consultar cambio peso información -------------------------->
                 <div class="container-fluid contenido" id="divConsultarConversion">
                     <h1>Consultar Conversión</h1>
 
                     <div class="container-fluid">
-                            <div class="input-group  mb-3">
-                                <label class="col-sm-3" for="megabyte">Valor a convertir</label>
-                                <input type="number" class="form-control" id="cantidad" aria-describedby="Valor del Megabyte" placeholder="Ingrese el valor del megabyte">
-                            </div>
-                            <div class="input-group  mb-3">
-                                <label class="col-sm-3" for="megabyte">Tipo de dato Ingresado</label>
-                                <form name="formConversion" id="fom">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Byte" checked>
-                                        <label class="form-check-label" for="inlineRadio1">Byte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Kilobyte">
-                                        <label class="form-check-label" for="inlineRadio2">Kilobyte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Megabyte">
-                                        <label class="form-check-label" for="inlineRadio2">Megabyte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Gigabyte">
-                                        <label class="form-check-label" for="inlineRadio2">Gigabyte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Terabyte">
-                                        <label class="form-check-label" for="inlineRadio2">Terabyte</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="input-group  mb-3">
-                                <label class="col-sm-3" for="megabyte">Tipo de dato Convertir</label>
-                                <form name="formConvertir" id="fom">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Byte" checked>
-                                        <label class="form-check-label" for="inlineRadio1">Byte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Kilobyte">
-                                        <label class="form-check-label" for="inlineRadio2">Kilobyte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Megabyte">
-                                        <label class="form-check-label" for="inlineRadio2">Megabyte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Gigabyte">
-                                        <label class="form-check-label" for="inlineRadio2">Gigabyte</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Terabyte">
-                                        <label class="form-check-label" for="inlineRadio2">Terabyte</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <button type="button" class="btn btn-primary" id="btnEquivalencia">Equivalencia</button>
-                            <div class="container-fluid contenido" id="tablaEquivalencias">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Concepto</th>
-                                            <th scope="col">Valor</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row" id="tdTexto"></th>
-                                            <td id="tdValorE"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="input-group  mb-3">
+                            <label class="col-sm-3" for="megabyte">Valor a convertir</label>
+                            <input type="number" class="form-control" id="cantidad" aria-describedby="Valor del Megabyte" placeholder="Ingrese el valor del megabyte">
+                        </div>
+                        <div class="input-group  mb-3">
+                            <label class="col-sm-3" for="megabyte">Tipo de dato Ingresado</label>
+                            <form name="formConversion" id="fom">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Byte" checked>
+                                    <label class="form-check-label" for="inlineRadio1">Byte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Kilobyte">
+                                    <label class="form-check-label" for="inlineRadio2">Kilobyte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Megabyte">
+                                    <label class="form-check-label" for="inlineRadio2">Megabyte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Gigabyte">
+                                    <label class="form-check-label" for="inlineRadio2">Gigabyte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Terabyte">
+                                    <label class="form-check-label" for="inlineRadio2">Terabyte</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="input-group  mb-3">
+                            <label class="col-sm-3" for="megabyte">Tipo de dato Convertir</label>
+                            <form name="formConvertir" id="fom">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Byte" checked>
+                                    <label class="form-check-label" for="inlineRadio1">Byte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Kilobyte">
+                                    <label class="form-check-label" for="inlineRadio2">Kilobyte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Megabyte">
+                                    <label class="form-check-label" for="inlineRadio2">Megabyte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Gigabyte">
+                                    <label class="form-check-label" for="inlineRadio2">Gigabyte</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Terabyte">
+                                    <label class="form-check-label" for="inlineRadio2">Terabyte</label>
+                                </div>
+                            </form>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btnEquivalencia">Equivalencia</button>
+                        <div class="container-fluid contenido" id="tablaEquivalencias">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Concepto</th>
+                                        <th scope="col">Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" id="tdTexto"></th>
+                                        <td id="tdValorE"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-
+                    <br />
+                    <br />
 
                 </div>
 
@@ -230,7 +366,7 @@
                 <img src="imagen/feather/linkedin.svg" alt="Breaking Borders Logo" height="50" width="50">
             </div>
             <div class="col-md-12 fin">
-                <b>Diseñado por: </b> Alexander Rodriguez
+                
             </div>
         </div>
     </footer>
