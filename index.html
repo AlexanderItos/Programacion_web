@@ -91,35 +91,36 @@
                 <!---------------------  Ingresar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divIngresarProducto">
                     <h1>Ingresar Producto</h1>
-                    <form action="#" method="POST">
-                        <div class="row mb-3">
+                    
+                    <form action="php/ingresar_producto.php" method="POST">
+                        <div class="input">
                             <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto" >
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="input">
                             <label for="nombreProducto" class="col-sm-2 col-form-label">Nombre de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombreProducto">
+                                <input type="text" class="form-control" name="nombreProducto" placeholder="Ingrese el nombre del producto" >
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="input">
                             <label for="marcaProducto" class="col-sm-2 col-form-label">Marca del producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese la marca del producto" id="marcaPproducto">
+                                <input type="text" class="form-control" name="marcaProducto" placeholder="Ingrese la marca del producto" >
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="input">
                             <label for="precioCompra" class="col-sm-2 col-form-label">Precio de compra:</label>
                             <div class="col-sm-5">
-                                <input type="number" class="form-control" placeholder="Ingrese el precio de compra" id="precioCompra">
+                                <input type="number" class="form-control" name="precioCompra" placeholder="Ingrese el precio de compra" >
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="input">
                             <label for="cantidadComprada" class="col-sm-2 col-form-label">Cantidad comprada:</label>
                             <div class="col-sm-5">
-                                <input type="number" class="form-control" placeholder="Ingrese la cantidad comprada" id="cantidadComprada">
+                                <input type="number" class="form-control" name="cantidadComprada" placeholder="Ingrese la cantidad comprada" >
                             </div>
                         </div>
 
@@ -133,35 +134,35 @@
                 <!---------------------  Actualizar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divActualizarProducto">
                     <h1>Actualizar Producto</h1>
-                    <form action="#" method="POST">
+                    <form action="php/actualizar_producto.php" method="POST">
                         <div class="row mb-3">
                             <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="nombreProducto" class="col-sm-2 col-form-label">Nombre de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombreProducto">
+                                <input type="text" class="form-control" name="nombreProducto" placeholder="Ingrese el nombre del producto">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="marcaProducto" class="col-sm-2 col-form-label">Marca del producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese la marca del producto" id="marcaPproducto">
+                                <input type="text" class="form-control" name="marcaProducto" placeholder="Ingrese la marca del producto">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="precioCompra" class="col-sm-2 col-form-label">Precio de compra:</label>
                             <div class="col-sm-5">
-                                <input type="number" class="form-control" placeholder="Ingrese el precio de compra" id="precioCompra">
+                                <input type="number" class="form-control" name="precioCompra" placeholder="Ingrese el precio de compra">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="cantidadComprada" class="col-sm-2 col-form-label">Cantidad comprada:</label>
                             <div class="col-sm-5">
-                                <input type="number" class="form-control" placeholder="Ingrese la cantidad comprada" id="cantidadComprada">
+                                <input type="number" class="form-control" name="cantidadComprada" placeholder="Ingrese la cantidad comprada">
                             </div>
                         </div>
 
@@ -176,11 +177,11 @@
                 <!---------------------  Eliminar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divEliminarProducto">
                     <h1>Eliminar Producto</h1>
-                    <form action="#" method="POST">
+                    <form action="php/eliminar_producto.php" method="POST">
                         <div class="row mb-3">
                             <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto">
                             </div>
 
                             <div class="col">
@@ -198,11 +199,11 @@
                 <!---------------------  Consultar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divConsultarProducto">
                     <h1>Consultar Producto</h1>
-                    <form action="#" method="POST">
+                    <form action="php/consultar_producto.php" method="POST">
                         <div class="row mb-3">
                             <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Ingrese el código del producto" id="codProducto">
+                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto" >
                             </div>
                             <div class="col">
                                 <button type="submit" class="btn btn-warning">Consultar producto</button>
