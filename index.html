@@ -85,42 +85,48 @@
                 <!---------------------  Generar Backup  ------------------------------>
                 <div class="container-fluid contenido" id="divGenerarBackup">
                     <h1>Generar Backup</h1>
+                    <form action="php/backup_bd.php">
+                        <button type="submit" class="btn btn-primary" id="btnCrearTabla">Ejecutar</button>
+                        <br />
+                        <br />
+                    </form>
+
                 </div>
 
                 <!---------------------  Inventario  -------------------------->
                 <!---------------------  Ingresar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divIngresarProducto">
                     <h1>Ingresar Producto</h1>
-                    
+
                     <form action="php/ingresar_producto.php" method="POST">
                         <div class="input">
                             <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto" >
+                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto">
                             </div>
                         </div>
                         <div class="input">
                             <label for="nombreProducto" class="col-sm-2 col-form-label">Nombre de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="nombreProducto" placeholder="Ingrese el nombre del producto" >
+                                <input type="text" class="form-control" name="nombreProducto" placeholder="Ingrese el nombre del producto">
                             </div>
                         </div>
                         <div class="input">
                             <label for="marcaProducto" class="col-sm-2 col-form-label">Marca del producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="marcaProducto" placeholder="Ingrese la marca del producto" >
+                                <input type="text" class="form-control" name="marcaProducto" placeholder="Ingrese la marca del producto">
                             </div>
                         </div>
                         <div class="input">
                             <label for="precioCompra" class="col-sm-2 col-form-label">Precio de compra:</label>
                             <div class="col-sm-5">
-                                <input type="number" class="form-control" name="precioCompra" placeholder="Ingrese el precio de compra" >
+                                <input type="number" class="form-control" name="precioCompra" placeholder="Ingrese el precio de compra">
                             </div>
                         </div>
                         <div class="input">
                             <label for="cantidadComprada" class="col-sm-2 col-form-label">Cantidad comprada:</label>
                             <div class="col-sm-5">
-                                <input type="number" class="form-control" name="cantidadComprada" placeholder="Ingrese la cantidad comprada" >
+                                <input type="number" class="form-control" name="cantidadComprada" placeholder="Ingrese la cantidad comprada">
                             </div>
                         </div>
 
@@ -199,21 +205,21 @@
                 <!---------------------  Consultar Producto  -------------------------->
                 <div class="container-fluid contenido" id="divConsultarProducto">
                     <h1>Consultar Producto</h1>
-                    <form action="php/consultar_producto.php" method="POST">
+                    <form action="php/consultar_producto.php" method="POST" id="formConsulta">
                         <div class="row mb-3">
                             <label for="codProducto" class="col-sm-2 col-form-label">Código de producto:</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto" >
+                                <input type="text" class="form-control" name="codProducto" placeholder="Ingrese el código del producto">
                             </div>
                             <div class="col">
                                 <button type="submit" class="btn btn-warning">Consultar producto</button>
                                 <br />
                                 <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
+
                             </div>
+                        </div>
+                        <div class="row mb-12" id="consultaResult">
+
                         </div>
                         <br />
 
@@ -377,7 +383,7 @@
                 <img src="imagen/feather/linkedin.svg" alt="Breaking Borders Logo" height="50" width="50">
             </div>
             <div class="col-md-12 fin">
-                
+
             </div>
         </div>
     </footer>

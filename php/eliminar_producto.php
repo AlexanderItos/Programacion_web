@@ -17,7 +17,9 @@ $sql = "DELETE FROM tabla42 WHERE codigo = $codigo";
 $resultado = mysqli_query($con,$sql);
 
 if (mysqli_query($con,$sql)){
-	echo "El producto se ha eliminado correctamente";
+	//echo "El producto se ha eliminado correctamente";
+	echo '<script type="text/javascript">alert("El producto se ha eliminado correctamente"); window.history.back();</script>';
+
 }
 else{
 	echo "Error al eliminar el producto: " . mysqli_error($con);

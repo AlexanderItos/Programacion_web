@@ -19,7 +19,9 @@ if (!$con){
 $sql = "UPDATE tabla42 SET codigo = '$codigo', nombre = '$nombre', marca = '$marca', precio = '$precio', cantidad = '$cantidad' WHERE codigo = '$codigo'";
 
 if (mysqli_query($con,$sql)){
-	echo "El producto se ha actualizado correctamente";
+	//echo "El producto se ha actualizado correctamente";
+	echo '<script type="text/javascript">alert("El producto se ha actualizado correctamente"); window.history.back();</script>';
+
 }
 else{
 	echo "Error al actualizar el producto: " . mysqli_error($con);

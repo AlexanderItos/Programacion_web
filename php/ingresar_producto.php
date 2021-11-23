@@ -20,7 +20,7 @@ $sql = "INSERT INTO tabla42 (codigo, nombre, marca, precio, cantidad)
 VALUES	('$codigo', '$nombre','$marca', '$precio', '$cantidad')";
 
 if (mysqli_query($con,$sql)){
-	echo "El producto se ha ingresado correctamente";
+	echo '<script type="text/javascript">alert("El producto se ha ingresado correctamente"); window.history.back();</script>';
 }
 else{
 	echo "Error al ingresar el producto: " . mysqli_error($con);

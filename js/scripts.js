@@ -4,23 +4,23 @@ $(document).ready(function() {
     //    $(".contenido").hide();
     //    $("#divAdministrador").show();
     //});
-     //Clic crear Base de datos
-    $("#crearBD").click(function () {
+    //Clic crear Base de datos
+    $("#crearBD").click(function() {
         $(".contenido").hide();
         $("#divCrearBD").show();
     });
-     //Clic crear Tabla
-    $("#crearTabla").click(function () {
+    //Clic crear Tabla
+    $("#crearTabla").click(function() {
         $(".contenido").hide();
         $("#divCrearTabla").show();
     });
-     //Clic Generar PDF
-    $("#generarPDF").click(function () {
+    //Clic Generar PDF
+    $("#generarPDF").click(function() {
         $(".contenido").hide();
         $("#divGenerarPDF").show();
     });
     //Clic generarBackup
-    $("#generarBackup").click(function () {
+    $("#generarBackup").click(function() {
         $(".contenido").hide();
         $("#divGenerarBackup").show();
     });
@@ -87,12 +87,12 @@ $(document).ready(function() {
     });
 
     //Clic Calcular Equivalencias
-    $("#btnEquivalencia").click(function () {
+    $("#btnEquivalencia").click(function() {
         var cantidad = parseFloat($("#cantidad").val() || 0);
         var seleccionT = document.formConvertir.inlineRadioOptions.value;
         var tipoT = document.formConversion.inlineRadioOptions.value;
         var valorI = 1;
-        switch (tipoT){
+        switch (tipoT) {
             case "Byte":
                 valorI = 1;
                 break;
@@ -109,7 +109,7 @@ $(document).ready(function() {
                 valorI = 1000000000000;
                 break;
         }
-        
+
         var valorC = 1;
         switch (seleccionT) {
             case "Byte":
@@ -134,5 +134,32 @@ $(document).ready(function() {
         $("#tablaEquivalencias").show();
         $('#tdTexto').html(seleccionT);
         $('#tdValorE').html(valor.toLocaleString());
+    });
+
+    $("#formConsulta").submit(function(event) {
+        /* stop form from submitting normally */
+        event.preventDefault();
+
+        /* get some values from elements on the page: */
+        var $form = $(this),
+            $submit = $form.find('button[type="submit"]'),
+            codProducto = $form.find('input[name="codProducto"]').val(),
+            url = $form.attr('action');
+
+        /* Send the data using post */
+        var posting = $.post(url, {
+            codProducto: codProducto,
+        });
+
+        posting.done(function(data) {
+            /* Put the results in a div */
+            $("#consultaResult").html(data);
+
+            /* Change the button text. */
+            //$submit.text('Sent, Thank you');
+
+            /* Disable the button. */
+            //$submit.attr("disabled", true);
+        });
     });
 });
