@@ -7,7 +7,7 @@ $base = "bdunad42";
 //Create connection
 $con = mysqli_connect($servidor, $usuario, $password,$base);
 if (!$con){
-	die("Fallo en la conexión: " . mysqli_connect_error());
+	die("Fallo en la conexiï¿½n: " . mysqli_connect_error());
 }
 
 $sql = "create TABLE tabla42(
@@ -18,7 +18,7 @@ $sql = "create TABLE tabla42(
     cantidad numeric	
 )";
 if (mysqli_query($con,$sql)){
-	echo "La tabla se ha creada correctamente";
+    echo '<script type="text/javascript">alert("Tabla creada Ã©xitosamente"); window.history.back();</script>';
 }
 else{
 	echo "Error creando la tabla: " . mysqli_error($con);

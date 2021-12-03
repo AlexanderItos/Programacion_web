@@ -6,12 +6,12 @@ $password = "12345678";
 //Create connection
 $con = mysqli_connect($servidor, $usuario, $password);
 if (!$con){
-	die("Fallo en la conexión: " . mysqli_connect_error());
+	die("Fallo en la conexiï¿½n: " . mysqli_connect_error());
 }
 
 $sql = "Create Database bdunad42";
 if (mysqli_query($con,$sql)){
-	echo "Base de datos creada correctamente";
+	echo '<script type="text/javascript">alert("Base de datos creada Ã©xitosamente"); window.history.back();</script>';
 }
 else{
 	echo "Error creando la base de datos: " . mysqli_error($con);

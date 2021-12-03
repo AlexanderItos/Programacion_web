@@ -12,8 +12,11 @@ $con = mysqli_connect($servidor, $usuario, $password,$base);
 if (!$con){
 	die("Fallo en la conexión: " . mysqli_connect_error());
 }
-
-$sql = "SELECT codigo, nombre, marca, precio, cantidad FROM tabla42 WHERE codigo = '$codigo'";
+if ($codigo) {
+	$sql = "SELECT codigo, nombre, marca, precio, cantidad FROM tabla42 WHERE codigo = '$codigo'";
+  }else{
+	$sql = "SELECT codigo, nombre, marca, precio, cantidad FROM tabla42 ";
+  }
 $resultado = mysqli_query($con,$sql);
 
 if (mysqli_num_rows($resultado) > 0) {
