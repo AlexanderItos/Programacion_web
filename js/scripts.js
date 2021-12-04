@@ -1,5 +1,6 @@
 $(document).ready(function() {
     //Clic Administrador 
+    $("#indice").show();
     //$("#Administrador").click(function() {
     //    $(".contenido").hide();
     //    $("#divAdministrador").show();
